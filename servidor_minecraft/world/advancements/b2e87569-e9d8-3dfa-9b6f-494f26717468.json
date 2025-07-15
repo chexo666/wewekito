@@ -6957,6 +6957,12 @@
     },
     "done": true
   },
+  "tombstone:adventure/find_grave_dust": {
+    "criteria": {
+      "has_item_grave_dust": "2025-07-15 03:55:15 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/iron_ingot_from_blasting_iron_ore": {
     "criteria": {
       "has_the_recipe": "2025-07-15 03:34:55 +0000"
@@ -7713,6 +7719,12 @@
     },
     "done": true
   },
+  "tombstone:adventure/choose_knowledge": {
+    "criteria": {
+      "coded_trigger": "2025-07-15 03:55:27 +0000"
+    },
+    "done": true
+  },
   "tombstone:recipe/blue_subaraki_grave": {
     "criteria": {
       "has_recipe": "2025-07-15 03:34:55 +0000"
@@ -8280,6 +8292,12 @@
   "minecraft:recipes/misc/music_disc_5": {
     "criteria": {
       "has_the_recipe": "2025-07-15 03:34:55 +0000"
+    },
+    "done": true
+  },
+  "tombstone:adventure/bone_picker": {
+    "criteria": {
+      "coded_trigger": "2025-07-15 03:55:14 +0000"
     },
     "done": true
   },
@@ -12159,6 +12177,12 @@
     },
     "done": true
   },
+  "tombstone:adventure/grave_dust_searcher": {
+    "criteria": {
+      "from_undead": "2025-07-15 03:55:14 +0000"
+    },
+    "done": false
+  },
   "minecraft:recipes/building_blocks/muddy_mangrove_roots": {
     "criteria": {
       "has_the_recipe": "2025-07-15 03:34:55 +0000"
@@ -12342,6 +12366,12 @@
   "usefulfood:recipes/food/chickensandwich": {
     "criteria": {
       "has_the_recipe": "2025-07-15 03:34:55 +0000"
+    },
+    "done": true
+  },
+  "minecraft:end/elytra": {
+    "criteria": {
+      "elytra": "2025-07-15 03:55:48 +0000"
     },
     "done": true
   },
