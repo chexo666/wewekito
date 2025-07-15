@@ -23,11 +23,11 @@
 	#Allows Curse of Bones at enchanting table [false/true|default:false]
 	curse_of_bones_enchanting_table = true
 	#Allows Blessing at enchanting table [false/true|default:false]
-	blessing_enchanting_table = true
+	blessing_enchanting_table = false
 	#Allows Frostbite at enchanting table [false/true|default:false]
 	frostbite_enchanting_table = true
 	#Allows Spectral Conjurer at enchanting table [false/true|default:false]
-	spectral_conjurer_enchanting_table = true
+	spectral_conjurer_enchanting_table = false
 	#Allows Incurable Wounds at enchanting table [false/true|default:false]
 	incurable_wounds_enchanting_table = true
 	#Allows Decrepitude at enchanting table [false/true|default:false]

@@ -1,0 +1,425 @@
+---- Minecraft Crash Report ----
+// My bad.
+
+Time: 2025-07-15 04:50:36
+Description: Ticking entity
+
+org.spongepowered.asm.mixin.injection.callback.CancellationException: The call resolvePlayerResponsibleForDamage is not cancellable.
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.injection.callback.CallbackInfo.cancel(CallbackInfo.java:101) ~[mixin-0.8.7.jar!/:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable.setReturnValue(CallbackInfoReturnable.java:106) ~[mixin-0.8.7.jar!/:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.LivingEntity.handler$tombstone$zcm000$methodResolvePlayerResponsibleForDamage(LivingEntity.java:4895) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.LivingEntity.resolvePlayerResponsibleForDamage(LivingEntity.java:1331) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.LivingEntity.hurtServer(LivingEntity.java:1188) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.Mob.doHurtTarget(Mob.java:1290) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.ai.goal.MeleeAttackGoal.checkAndPerformAttack(MeleeAttackGoal.java:154) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.ai.goal.MeleeAttackGoal.tick(MeleeAttackGoal.java:146) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.ai.goal.WrappedGoal.tick(WrappedGoal.java:65) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.ai.goal.GoalSelector.tickRunningGoals(GoalSelector.java:108) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.ai.goal.GoalSelector.tick(GoalSelector.java:99) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.Mob.serverAiStep(Mob.java:653) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.LivingEntity.aiStep(LivingEntity.java:2792) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.Mob.aiStep(Mob.java:436) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.AgeableMob.aiStep(AgeableMob.java:131) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.animal.Animal.aiStep(Animal.java:66) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2572) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.Mob.tick(Mob.java:321) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/tombstone@9.4.0/ovh.corail.tombstone.entity.SpectralWolf.tick(SpectralWolf.java:109) ~[tombstone-forge-1.21.5-9.4.0.jar!/:9.4.0]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:763) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.level.Level.guardEntityTick(Level.java:581) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.level.ServerLevel.lambda$tick$2(ServerLevel.java:414) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:54) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:396) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1066) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:949) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:709) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:276) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Transformer Audit:
+  net.minecraft.server.MinecraftServer
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: mixin:APP:balm.mixins.json:MinecraftServerMixin
+    PLUGIN: mixin:AFTER
+  net.minecraft.server.level.ServerLevel
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: mixin:APP:glitchcore.mixins.json:MixinServerLevel
+    PLUGIN: mixin:APP:sereneseasons.mixins.json:MixinServerLevel
+    PLUGIN: mixin:AFTER
+  net.minecraft.world.entity.AgeableMob
+    REASON: computing_frames
+    REASON: classloading
+    REASON: mixin
+  net.minecraft.world.entity.LivingEntity
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: mixin:APP:clienttweaks.mixins.json:LivingEntityAccessor
+    PLUGIN: mixin:APP:netherportalfix.mixins.json:LivingEntityAccessor
+    PLUGIN: mixin:APP:tombstone.mixins.json:LivingEntityMixin
+    PLUGIN: mixin:AFTER
+  net.minecraft.world.entity.Mob
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: mixin:APP:tombstone.mixins.json:MobMixin
+    PLUGIN: mixin:AFTER
+  net.minecraft.world.entity.ai.goal.GoalSelector
+    REASON: classloading
+  net.minecraft.world.entity.ai.goal.MeleeAttackGoal
+    REASON: classloading
+  net.minecraft.world.entity.ai.goal.WrappedGoal
+    REASON: classloading
+  net.minecraft.world.entity.animal.Animal
+    REASON: classloading
+  net.minecraft.world.level.Level
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: mixin:APP:sereneseasons.mixins.json:MixinLevel
+    PLUGIN: mixin:AFTER
+  net.minecraft.world.level.entity.EntityTickList
+    REASON: classloading
+  org.spongepowered.asm.mixin.injection.callback.CallbackInfo
+    REASON: mixin
+  org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable
+    REASON: mixin
+  ovh.corail.tombstone.entity.SpectralWolf
+    REASON: mixin
+    REASON: classloading
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Suspected Mod: 
+	Corail Tombstone (tombstone), Version: 9.4.0
+		Issue tracker URL: https://github.com/Corail31/tombstone_lite/issues
+		Mixin class: ovh.corail.tombstone.mixin.LivingEntityMixin
+		Target: net.minecraft.world.entity.LivingEntity
+		at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.LivingEntity.handler$tombstone$zcm000$methodResolvePlayerResponsibleForDamage(LivingEntity.java:4895)
+Stacktrace:
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.injection.callback.CallbackInfo.cancel(CallbackInfo.java:101) ~[mixin-0.8.7.jar!/:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable.setReturnValue(CallbackInfoReturnable.java:106) ~[mixin-0.8.7.jar!/:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.LivingEntity.handler$tombstone$zcm000$methodResolvePlayerResponsibleForDamage(LivingEntity.java:4895) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.LivingEntity.resolvePlayerResponsibleForDamage(LivingEntity.java:1331) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.LivingEntity.hurtServer(LivingEntity.java:1188) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.Mob.doHurtTarget(Mob.java:1290) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.ai.goal.MeleeAttackGoal.checkAndPerformAttack(MeleeAttackGoal.java:154) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.ai.goal.MeleeAttackGoal.tick(MeleeAttackGoal.java:146) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.ai.goal.WrappedGoal.tick(WrappedGoal.java:65) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.ai.goal.GoalSelector.tickRunningGoals(GoalSelector.java:108) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.ai.goal.GoalSelector.tick(GoalSelector.java:99) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.Mob.serverAiStep(Mob.java:653) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.LivingEntity.aiStep(LivingEntity.java:2792) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.Mob.aiStep(Mob.java:436) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.AgeableMob.aiStep(AgeableMob.java:131) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.animal.Animal.aiStep(Animal.java:66) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2572) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.Mob.tick(Mob.java:321) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/tombstone@9.4.0/ovh.corail.tombstone.entity.SpectralWolf.tick(SpectralWolf.java:109) ~[tombstone-forge-1.21.5-9.4.0.jar!/:9.4.0]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:763) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.level.Level.guardEntityTick(Level.java:581) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.level.ServerLevel.lambda$tick$2(ServerLevel.java:414) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:54) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+Transformer Audit:
+  net.minecraft.server.level.ServerLevel
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: mixin:APP:glitchcore.mixins.json:MixinServerLevel
+    PLUGIN: mixin:APP:sereneseasons.mixins.json:MixinServerLevel
+    PLUGIN: mixin:AFTER
+  net.minecraft.world.entity.AgeableMob
+    REASON: computing_frames
+    REASON: classloading
+    REASON: mixin
+  net.minecraft.world.entity.LivingEntity
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: mixin:APP:clienttweaks.mixins.json:LivingEntityAccessor
+    PLUGIN: mixin:APP:netherportalfix.mixins.json:LivingEntityAccessor
+    PLUGIN: mixin:APP:tombstone.mixins.json:LivingEntityMixin
+    PLUGIN: mixin:AFTER
+  net.minecraft.world.entity.Mob
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: mixin:APP:tombstone.mixins.json:MobMixin
+    PLUGIN: mixin:AFTER
+  net.minecraft.world.entity.ai.goal.GoalSelector
+    REASON: classloading
+  net.minecraft.world.entity.ai.goal.MeleeAttackGoal
+    REASON: classloading
+  net.minecraft.world.entity.ai.goal.WrappedGoal
+    REASON: classloading
+  net.minecraft.world.entity.animal.Animal
+    REASON: classloading
+  net.minecraft.world.level.Level
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: mixin:APP:sereneseasons.mixins.json:MixinLevel
+    PLUGIN: mixin:AFTER
+  net.minecraft.world.level.entity.EntityTickList
+    REASON: classloading
+  org.spongepowered.asm.mixin.injection.callback.CallbackInfo
+    REASON: mixin
+  org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable
+    REASON: mixin
+  ovh.corail.tombstone.entity.SpectralWolf
+    REASON: mixin
+    REASON: classloading
+-- Entity being ticked --
+Details:
+	Entity Type: tombstone:spectral_wolf (ovh.corail.tombstone.entity.SpectralWolf)
+	Entity ID: 51073
+	Entity Name: entity.tombstone.spectral_wolf
+	Entity's Exact location: 532.00, 64.00, 476.00
+	Entity's Block location: World: (532,64,476), Section: (at 4,0,12 in 33,4,29; chunk contains blocks 528,0,464 to 543,255,479), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Entity's Momentum: 0.00, 0.00, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.level.Level.guardEntityTick(Level.java:581) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.level.ServerLevel.lambda$tick$2(ServerLevel.java:414) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:54) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:396) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1066) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:949) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:709) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:276) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Transformer Audit:
+  net.minecraft.server.MinecraftServer
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: mixin:APP:balm.mixins.json:MinecraftServerMixin
+    PLUGIN: mixin:AFTER
+  net.minecraft.server.level.ServerLevel
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: mixin:APP:glitchcore.mixins.json:MixinServerLevel
+    PLUGIN: mixin:APP:sereneseasons.mixins.json:MixinServerLevel
+    PLUGIN: mixin:AFTER
+  net.minecraft.world.level.Level
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: mixin:APP:sereneseasons.mixins.json:MixinLevel
+    PLUGIN: mixin:AFTER
+  net.minecraft.world.level.entity.EntityTickList
+    REASON: classloading
+
+
+-- Affected level --
+Details:
+	All players: 2 total; ServerPlayer{name=nazcke, id=199, pos=(521.774020130318, 59.0, 480.58170528097526), mode=SURVIVAL, permission=0}, ServerPlayer{name=ShallanDav4r, id=1611, pos=(570.0842786685754, 65.41999998688698, 480.2974554867452), mode=SURVIVAL, permission=4}
+	Chunk stats: 3658
+	Level dimension: minecraft:the_nether
+	Derived: true
+	Level spawn location: World: (32,107,-32), Section: (at 0,11,0 in 2,6,-2; chunk contains blocks 32,0,-32 to 47,255,-17), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Level time: 3594038 game time, 2739621 day time
+	Level name: world
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Commands: false
+	Level weather: Rain time: 42840 (now: false), thunder time: 85709 (now: false)
+	Known server brands: forge
+	Removed feature flags: 
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+	Loaded entity count: 287
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.level.ServerLevel.fillReportDetails(ServerLevel.java:1740) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1069) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:949) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:709) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:276) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Transformer Audit:
+  net.minecraft.server.MinecraftServer
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: mixin:APP:balm.mixins.json:MinecraftServerMixin
+    PLUGIN: mixin:AFTER
+  net.minecraft.server.level.ServerLevel
+    REASON: mixin
+    PLUGIN: accesstransformer:BEFORE
+    REASON: computing_frames
+    PLUGIN: accesstransformer:BEFORE
+    REASON: classloading
+    PLUGIN: accesstransformer:BEFORE
+    PLUGIN: mixin:APP:glitchcore.mixins.json:MixinServerLevel
+    PLUGIN: mixin:APP:sereneseasons.mixins.json:MixinServerLevel
+    PLUGIN: mixin:AFTER
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.5
+	Minecraft Version ID: 1.21.5
+	Operating System: Linux (amd64) version 6.8.0-1027-azure
+	Java Version: 21.0.7, Ubuntu
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Ubuntu
+	Memory: 1185169424 bytes (1130 MiB) / 3137339392 bytes (2992 MiB) up to 12884901888 bytes (12288 MiB)
+	CPUs: 4
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD EPYC 7763 64-Core Processor
+	Identifier: AuthenticAMD Family 25 Model 1 Stepping 1
+	Microarchitecture: Zen 3
+	Frequency (GHz): -0.00
+	Number of physical packages: 1
+	Number of physical CPUs: 2
+	Number of logical CPUs: 4
+	Graphics card #0 name: unknown
+	Graphics card #0 vendor: unknown
+	Graphics card #0 VRAM (MiB): 0.00
+	Graphics card #0 deviceId: unknown
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MiB): 7995.00
+	Virtual memory used (MiB): 6261.28
+	Swap memory total (MiB): 0.00
+	Swap memory used (MiB): 0.00
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 109690.16, total: 120377.56
+	Space in storage for workdir (MiB): available: 16589.55, total: 32077.81
+	JVM Flags: 2 total; -Xms2G -Xmx12G
+	Server Running: true
+	Player Count: 2 / 10; [ServerPlayer['nazcke'/199, l='ServerLevel[world]', x=521.77, y=59.00, z=480.58], ServerPlayer['ShallanDav4r'/1611, l='ServerLevel[world]', x=570.08, y=65.42, z=480.30]]
+	Active Data Packs: vanilla, mod:bottledair, mod:clienttweaks, mod:fastipping (incompatible), mod:notes (incompatible), mod:kuma_api (incompatible), mod:terrablender (incompatible), mod:netherportalfix, mod:chunky (incompatible), mod:configlibtxf (incompatible), mod:philipsruins (incompatible), mod:spark (incompatible), mod:multimine (incompatible), mod:guiclock, mod:sound_physics_remastered (incompatible), mod:waystones, mod:collective, mod:cyclepaintings, mod:clumps (incompatible), mod:searchables (incompatible), mod:guicompass, mod:myserveriscompatible (incompatible), mod:glitchcore (incompatible), mod:biomesoplenty (incompatible), mod:sereneseasons (incompatible), mod:cherishedworlds (incompatible), mod:balm (incompatible), mod:shulkerbox (incompatible), mod:walljump (incompatible), mod:advancementscreenshot, mod:huskspawn, mod:forge, mod:stackrefill, mod:deathbackup, mod:craftingtweaks, mod:replantingcrops, mod:defaultoptions, walljump/enchantments, mod:darkheads (incompatible), mod:darksleep (incompatible), mod:dynamiclights, mod:skinrestorer (incompatible), mod:mcwstairs (incompatible), mod:toomanypaintings (incompatible), mod:mcwpaths (incompatible), mod:mcwbridges (incompatible), mod:mcwfences (incompatible), mod:mcwbiomesoplenty (incompatible), mod:addonslib (incompatible), mod:freefbible (incompatible), mod:mcwlights (incompatible), mod:usefulfood (incompatible), mod:darkspins (incompatible), mod:mr_withering_enchantment, mod:mr_lullaby_knowledgebook, mod:mcwwindows (incompatible), mod:enchantonce (incompatible), mod:moremobs, mod:tpamod (incompatible), mod:infernalmobs (incompatible), mod:mr_burnless_enchantment (incompatible), mod:mr_lullaby_soulboundenchantment, mod:mr_health_enchantment, mod:mr_poisoning_enchantment, mod:tombstone, mod:mr_swiftness_enchantment
+	Available Data Packs: minecart_improvements, mod:addonslib (incompatible), mod:advancementscreenshot, mod:balm (incompatible), mod:biomesoplenty (incompatible), mod:bottledair, mod:cherishedworlds (incompatible), mod:chunky (incompatible), mod:clienttweaks, mod:clumps (incompatible), mod:collective, mod:configlibtxf (incompatible), mod:craftingtweaks, mod:cyclepaintings, mod:darkheads (incompatible), mod:darksleep (incompatible), mod:darkspins (incompatible), mod:deathbackup, mod:defaultoptions, mod:dynamiclights, mod:enchantonce (incompatible), mod:fastipping (incompatible), mod:forge, mod:freefbible (incompatible), mod:glitchcore (incompatible), mod:guiclock, mod:guicompass, mod:huskspawn, mod:infernalmobs (incompatible), mod:kuma_api (incompatible), mod:mcwbiomesoplenty (incompatible), mod:mcwbridges (incompatible), mod:mcwfences (incompatible), mod:mcwlights (incompatible), mod:mcwpaths (incompatible), mod:mcwstairs (incompatible), mod:mcwwindows (incompatible), mod:moremobs, mod:mr_burnless_enchantment (incompatible), mod:mr_health_enchantment, mod:mr_lullaby_knowledgebook, mod:mr_lullaby_soulboundenchantment, mod:mr_poisoning_enchantment, mod:mr_swiftness_enchantment, mod:mr_withering_enchantment, mod:multimine (incompatible), mod:myserveriscompatible (incompatible), mod:netherportalfix, mod:notes (incompatible), mod:philipsruins (incompatible), mod:replantingcrops, mod:searchables (incompatible), mod:sereneseasons (incompatible), mod:shulkerbox (incompatible), mod:skinrestorer (incompatible), mod:sound_physics_remastered (incompatible), mod:spark (incompatible), mod:stackrefill, mod:terrablender (incompatible), mod:tombstone, mod:toomanypaintings (incompatible), mod:tpamod (incompatible), mod:usefulfood (incompatible), mod:walljump (incompatible), mod:waystones, redstone_experiments, trade_rebalance, vanilla, walljump/enchantments
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	World Seed: 7220563033590532135
+	Suppressed Exceptions: ~~NONE~~
+	Is Modded: Definitely; Server brand changed to 'forge'
+	Type: Dedicated Server (map_server.txt)
+	ModLauncher: 10.2.4
+	ModLauncher launch target: forge_server
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/ slf4jfixer PLUGINSERVICE 
+		/ runtimedistcleaner PLUGINSERVICE 
+		/ runtime_enum_extender PLUGINSERVICE 
+		/ object_holder_definalize PLUGINSERVICE 
+		/ capability_token_subclass PLUGINSERVICE 
+		/ accesstransformer PLUGINSERVICE 
+		/ eventbus PLUGINSERVICE 
+		/ mixin PLUGINSERVICE 
+		/ fml TRANSFORMATIONSERVICE 
+		/ mixin TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		lowcodefml@55
+		minecraft@1.0
+		javafml@55.0.3
+	Mod List: 
+		bottledair-1.21.5-2.5.jar                         |Bottled Air                   |bottledair                    |2.5                 |DONE      |Manifest: NOSIGNATURE
+		clienttweaks-forge-1.21.5-21.5.3.jar              |Client Tweaks                 |clienttweaks                  |21.5.3              |DONE      |Manifest: NOSIGNATURE
+		Notes-1.21.5-1.3.1-forge.jar                      |Notes                         |notes                         |1.21.5-1.3.1-forge  |DONE      |Manifest: NOSIGNATURE
+		kuma-api-forge-21.5.2+1.21.5.jar                  |KumaAPI                       |kuma_api                      |21.5.2              |DONE      |Manifest: NOSIGNATURE
+		netherportalfix-forge-1.21.5-21.5.2.jar           |NetherPortalFix               |netherportalfix               |21.5.2              |DONE      |Manifest: NOSIGNATURE
+		darkspins-forge-1.21-1.2.2b.jar                   |DarkSpins                     |darkspins                     |1.2.2               |DONE      |Manifest: NOSIGNATURE
+		darksleep-forge-1.21.1-1.0.1a.jar                 |DarkSleep                     |darksleep                     |1.0.1               |DONE      |Manifest: NOSIGNATURE
+		withering-enchantment-v1.0.4.jar                  |Withering Enchantment         |mr_withering_enchantment      |1-v1.0.4            |DONE      |Manifest: NOSIGNATURE
+		lullaby-knowledge-book-v1.1.1.jar                 |Knowledge Book                |mr_lullaby_knowledgebook      |1-v1.1.1            |DONE      |Manifest: NOSIGNATURE
+		configlibtxf-10.2.8-forge.jar                     |ConfigLib TXF                 |configlibtxf                  |10.2.8-forge        |DONE      |Manifest: NOSIGNATURE
+		dynamiclights-v1.8.6-mc1.17-1.21.5-mod.jar        |Dynamic Lights                |dynamiclights                 |1.8.6+mod           |DONE      |Manifest: NOSIGNATURE
+		mcw-windows-2.4.0-1.21.5forge.jar                 |Macaw's Windows               |mcwwindows                    |2.4.0               |DONE      |Manifest: NOSIGNATURE
+		multimine-1.21.5.1.jar                            |Multi Mine                    |multimine                     |1.21.5.1            |DONE      |Manifest: NOSIGNATURE
+		guiclock-1.21.5-4.7.jar                           |GUI Clock                     |guiclock                      |4.7                 |DONE      |Manifest: NOSIGNATURE
+		enchantonce-1.21.5-forge-1.0.4.jar                |EnchantOnce                   |enchantonce                   |1.21.5-forge-1.0.4  |DONE      |Manifest: NOSIGNATURE
+		sound-physics-remastered-forge-1.21.5-1.4.10.jar  |Sound Physics Remastered      |sound_physics_remastered      |1.21.5-1.4.10       |DONE      |Manifest: NOSIGNATURE
+		waystones-forge-1.21.5-21.5.4.jar                 |Waystones                     |waystones                     |21.5.4              |DONE      |Manifest: NOSIGNATURE
+		Clumps-forge-1.21.5-23.0.0.1.jar                  |Clumps                        |clumps                        |23.0.0.1            |DONE      |Manifest: NOSIGNATURE
+		mcw-stairs-1.0.1-1.21.5forge.jar                  |Macaw's Stairs and Balconies  |mcwstairs                     |1.0.1               |DONE      |Manifest: NOSIGNATURE
+		guicompass-1.21.5-4.9.jar                         |GUI Compass                   |guicompass                    |4.9                 |DONE      |Manifest: NOSIGNATURE
+		MyServerIsCompatible-1.21-1.0.jar                 |MyServerIsCompatible          |myserveriscompatible          |1.0                 |DONE      |Manifest: NOSIGNATURE
+		GlitchCore-forge-1.21.5-2.5.0.1.jar               |GlitchCore                    |glitchcore                    |2.5.0.1             |DONE      |Manifest: NOSIGNATURE
+		SereneSeasons-forge-1.21.5-10.4.0.1.jar           |Serene Seasons                |sereneseasons                 |10.4.0.1            |DONE      |Manifest: NOSIGNATURE
+		toomanypaintings-24.11.29-1.21.3-forge.jar        |Too Many Paintings!           |toomanypaintings              |24.11.29-1.21.3-forg|DONE      |Manifest: NOSIGNATURE
+		balm-forge-1.21.5-21.5.14-all.jar                 |Balm                          |balm                          |21.5.14             |DONE      |Manifest: NOSIGNATURE
+		shulkerbox-forge-1.21.5-2.0.5.jar                 |Advanced Shulkerboxes         |shulkerbox                    |1.21.5-2.0.5        |DONE      |Manifest: NOSIGNATURE
+		walljump-1.21.5-1.3.4-forge.jar                   |Wall-Jump TXF                 |walljump                      |1.21.5-1.3.4-forge  |DONE      |Manifest: NOSIGNATURE
+		huskspawn-1.21.5-3.6.jar                          |Husk Spawn                    |huskspawn                     |3.6                 |DONE      |Manifest: NOSIGNATURE
+		forge-1.21.5-55.0.3-universal.jar                 |Forge                         |forge                         |55.0.3              |DONE      |Manifest: NOSIGNATURE
+		stackrefill-1.21.5-4.7.jar                        |Stack Refill                  |stackrefill                   |4.7                 |DONE      |Manifest: NOSIGNATURE
+		more_mobs-v1.5.5-mc1.14-1.21.5-mod.jar            |More Mobs                     |moremobs                      |1.5.5+mod           |DONE      |Manifest: NOSIGNATURE
+		SimpleTPA-1.21.5.jar                              |TPA Mod by Krysztok           |tpamod                        |1.0                 |DONE      |Manifest: NOSIGNATURE
+		deathbackup-1.21.5-3.5.jar                        |Death Backup                  |deathbackup                   |3.5                 |DONE      |Manifest: NOSIGNATURE
+		mcw-paths-1.1.0-mc1.21.5forge.jar                 |Macaw's Paths and Pavings     |mcwpaths                      |1.1.0               |DONE      |Manifest: NOSIGNATURE
+		infernalmobs-1.21.5.1.jar                         |Infernal Mobs                 |infernalmobs                  |1.21.5.1            |DONE      |Manifest: NOSIGNATURE
+		craftingtweaks-forge-1.21.5-21.5.2.jar            |Crafting Tweaks               |craftingtweaks                |21.5.2              |DONE      |Manifest: NOSIGNATURE
+		replantingcrops-1.21.5-5.5.jar                    |Replanting Crops              |replantingcrops               |5.5                 |DONE      |Manifest: NOSIGNATURE
+		forge-1.21.5-55.0.3-server.jar                    |Minecraft                     |minecraft                     |1.21.5              |DONE      |Manifest: NOSIGNATURE
+		mcw-bridges-3.1.0-mc1.21.5forge.jar               |Macaw's Bridges               |mcwbridges                    |3.1.0               |DONE      |Manifest: NOSIGNATURE
+		burnless-enchantment-v1.0.0.jar                   |Burnless Enchantment          |mr_burnless_enchantment       |1-v1.0.0            |DONE      |Manifest: NOSIGNATURE
+		fast-ip-ping-v1.0.5-mc1.21.1-forge.jar            |Fast IP Ping                  |fastipping                    |1.0.5               |DONE      |Manifest: NOSIGNATURE
+		lullaby-soulbound-enchantment-v1.0.3.jar          |Soulbound Enchantment         |mr_lullaby_soulboundenchantmen|1-v1.0.3            |DONE      |Manifest: NOSIGNATURE
+		TerraBlender-forge-1.21.5-5.0.0.1.jar             |TerraBlender                  |terrablender                  |5.0.0.1             |DONE      |Manifest: NOSIGNATURE
+		Chunky-Forge-1.4.36.jar                           |Chunky                        |chunky                        |1.4.36              |DONE      |Manifest: NOSIGNATURE
+		mcw-fences-1.2.0-1.21.5forge.jar                  |Macaw's Fences and Walls      |mcwfences                     |1.2.0               |DONE      |Manifest: NOSIGNATURE
+		darkheads-forge-1.21-1.1.6a.jar                   |DarkHeads                     |darkheads                     |1.1.6               |DONE      |Manifest: NOSIGNATURE
+		Philips-Ruins1.21.5-2.2.jar                       |Philip's Ruins                |philipsruins                  |2.2                 |DONE      |Manifest: NOSIGNATURE
+		spark-1.10.129-forge.jar                          |spark                         |spark                         |1.10.129            |DONE      |Manifest: NOSIGNATURE
+		mcwbiomesoplenty-1.21.5-1.2.jar                   |Macaw's Biomes O' Plenty      |mcwbiomesoplenty              |1.21.5-1.2          |DONE      |Manifest: NOSIGNATURE
+		BiomesOPlenty-forge-1.21.5-21.4.0.58.jar          |Biomes O' Plenty              |biomesoplenty                 |21.4.0.58           |DONE      |Manifest: NOSIGNATURE
+		collective-1.21.5-8.3.jar                         |Collective                    |collective                    |8.3                 |DONE      |Manifest: NOSIGNATURE
+		cyclepaintings-1.21.5-4.1.jar                     |Cycle Paintings               |cyclepaintings                |4.1                 |DONE      |Manifest: NOSIGNATURE
+		health-enchantment-v1.0.0.jar                     |Health Enchantment            |mr_health_enchantment         |1-v1.0.0            |DONE      |Manifest: NOSIGNATURE
+		UsefulFood_Reborn-1.3.2-1.21.5-Forge.jar          |UsefulFood_Reborn             |usefulfood                    |1.3.2-1.21.5-Forge  |DONE      |Manifest: NOSIGNATURE
+		Searchables-forge-1.21.5-1.0.2.jar                |Searchables                   |searchables                   |1.0.2               |DONE      |Manifest: NOSIGNATURE
+		poisoning-enchantment-v1.0.4.jar                  |Poisoning Enchantment         |mr_poisoning_enchantment      |1-v1.0.4            |DONE      |Manifest: NOSIGNATURE
+		tombstone-forge-1.21.5-9.4.0.jar                  |Corail Tombstone              |tombstone                     |9.4.0               |DONE      |Manifest: NOSIGNATURE
+		cherishedworlds-forge-12.0.0+1.21.5.jar           |Cherished Worlds              |cherishedworlds               |12.0.0+1.21.5       |DONE      |Manifest: NOSIGNATURE
+		advancementscreenshot-1.21.5-5.1.jar              |Advancement Screenshot        |advancementscreenshot         |5.1                 |DONE      |Manifest: NOSIGNATURE
+		addonslib-1.21.5-1.0.jar                          |Addons Lib                    |addonslib                     |1.21.5-1.0          |DONE      |Manifest: NOSIGNATURE
+		freefbible-FORGE-1.21.5-1.0.0.jar                 |Freef's Bible                 |freefbible                    |1.21.5-1.0.0        |DONE      |Manifest: NOSIGNATURE
+		skinrestorer-2.3.5+1.21.5-forge.jar               |SkinRestorer                  |skinrestorer                  |2.3.5+1.21.5-forge  |DONE      |Manifest: NOSIGNATURE
+		swiftness-enchantment-v1.0.0.jar                  |Swiftness Enchantment         |mr_swiftness_enchantment      |1-v1.0.0            |DONE      |Manifest: NOSIGNATURE
+		mcw-lights-1.1.2-mc1.21.5forge.jar                |Macaw's Lights and Lamps      |mcwlights                     |1.1.2               |DONE      |Manifest: NOSIGNATURE
+		defaultoptions-forge-1.21.5-21.5.2.jar            |Default Options               |defaultoptions                |21.5.2              |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: fa56804a-71dc-43e8-9538-1858398b81ab
+	FML: 0.0
+	Forge: net.minecraftforge:55.0.3
