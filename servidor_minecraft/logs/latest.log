@@ -185,3 +185,77 @@
 [15Jul2025 03:55:15.025] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: nazcke has made the advancement [tombstone.advancement.find_grave_dust.title]
 [15Jul2025 03:55:27.208] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: nazcke has made the advancement [tombstone.advancement.choose_knowledge.title]
 [15Jul2025 03:55:48.426] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: nazcke has reached the goal [Sky's the Limit]
+[15Jul2025 04:02:20.724] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <ShallanDav4r> 600 88 280
+[15Jul2025 04:02:48.373] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Teleported ShallanDav4r to 587.620000, 60.000000, 540.110000
+[15Jul2025 04:03:21.411] [Server thread/ERROR] [net.minecraft.server.MinecraftServer/]: Encountered an unexpected exception
+net.minecraft.ReportedException: Ticking entity
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1070) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:949) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:709) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:276) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: org.spongepowered.asm.mixin.injection.callback.CancellationException: The call resolvePlayerResponsibleForDamage is not cancellable.
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.injection.callback.CallbackInfo.cancel(CallbackInfo.java:101) ~[mixin-0.8.7.jar!/:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at SECURE-BOOTSTRAP/org.spongepowered.mixin/org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable.setReturnValue(CallbackInfoReturnable.java:106) ~[mixin-0.8.7.jar!/:0.8.7+Jenkins-b321.git-4053421aa10aaac6127d969028a29c94fe3054f6]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.LivingEntity.handler$tombstone$zco000$methodResolvePlayerResponsibleForDamage(LivingEntity.java:4895) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.LivingEntity.resolvePlayerResponsibleForDamage(LivingEntity.java:1331) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.LivingEntity.hurtServer(LivingEntity.java:1188) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.Mob.doHurtTarget(Mob.java:1290) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.ai.goal.MeleeAttackGoal.checkAndPerformAttack(MeleeAttackGoal.java:154) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.ai.goal.MeleeAttackGoal.tick(MeleeAttackGoal.java:146) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.ai.goal.WrappedGoal.tick(WrappedGoal.java:65) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.ai.goal.GoalSelector.tickRunningGoals(GoalSelector.java:108) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.ai.goal.GoalSelector.tick(GoalSelector.java:99) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.Mob.serverAiStep(Mob.java:653) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.LivingEntity.aiStep(LivingEntity.java:2792) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.Mob.aiStep(Mob.java:436) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.AgeableMob.aiStep(AgeableMob.java:131) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.animal.Animal.aiStep(Animal.java:66) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2572) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.entity.Mob.tick(Mob.java:321) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/tombstone@9.4.0/ovh.corail.tombstone.entity.SpectralWolf.tick(SpectralWolf.java:109) ~[tombstone-forge-1.21.5-9.4.0.jar!/:9.4.0]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:763) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.level.Level.guardEntityTick(Level.java:581) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.level.ServerLevel.lambda$tick$2(ServerLevel.java:414) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:54) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:396) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1066) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	... 4 more
+[15Jul2025 04:03:21.438] [Server thread/FATAL] [net.minecraftforge.common.ForgeMod/]: Preparing crash report with UUID 17d4ecdb-dd04-4f14-bf54-99af855c007b
+[15Jul2025 04:03:21.439] [Server thread/ERROR] [net.minecraft.server.MinecraftServer/]: This crash report has been saved to: /workspaces/wewekito/servidor_minecraft/crash-reports/crash-2025-07-15_04.03.21-server.txt
+[15Jul2025 04:03:21.439] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[15Jul2025 04:03:21.440] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[15Jul2025 04:03:21.513] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: nazcke lost connection: Server closed
+[15Jul2025 04:03:21.513] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: nazcke left the game
+[15Jul2025 04:03:21.553] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[15Jul2025 04:03:21.626] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[15Jul2025 04:03:21.669] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[15Jul2025 04:03:21.674] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[15Jul2025 04:03:21.879] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[15Jul2025 04:03:21.879] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[15Jul2025 04:03:21.880] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[15Jul2025 04:03:21.880] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[15Jul2025 04:03:55.677] [spark-async-sampler-worker-thread/WARN] [spark/]: Exception occurred while getting world info
+java.util.concurrent.RejectedExecutionException: Server already shutting down
+	at TRANSFORMER/minecraft@1.21.5/net.minecraft.server.MinecraftServer.executeIfPossible(MinecraftServer.java:1457) ~[forge-1.21.5-55.0.3-server.jar!/:?]
+	at TRANSFORMER/spark@1.10.129/me.lucko.spark.forge.plugin.ForgeServerSparkPlugin.executeSync(ForgeServerSparkPlugin.java:216) ~[spark-1.10.129-forge.jar!/:?]
+	at java.base/java.util.concurrent.CompletableFuture.asyncSupplyStage(CompletableFuture.java:1782) ~[?:?]
+	at java.base/java.util.concurrent.CompletableFuture.supplyAsync(CompletableFuture.java:2005) ~[?:?]
+	at TRANSFORMER/spark@1.10.129/me.lucko.spark.common.platform.world.AsyncWorldInfoProvider.async(AsyncWorldInfoProvider.java:55) ~[spark-1.10.129-forge.jar!/:?]
+	at TRANSFORMER/spark@1.10.129/me.lucko.spark.common.platform.world.AsyncWorldInfoProvider.pollCounts(AsyncWorldInfoProvider.java:77) ~[spark-1.10.129-forge.jar!/:?]
+	at TRANSFORMER/spark@1.10.129/me.lucko.spark.common.platform.world.AsyncWorldInfoProvider.getCounts(AsyncWorldInfoProvider.java:93) ~[spark-1.10.129-forge.jar!/:?]
+	at TRANSFORMER/spark@1.10.129/me.lucko.spark.common.sampler.window.WindowStatisticsCollector.measure(WindowStatisticsCollector.java:186) ~[spark-1.10.129-forge.jar!/:?]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[?:?]
+	at TRANSFORMER/spark@1.10.129/me.lucko.spark.common.sampler.window.WindowStatisticsCollector.measureNow(WindowStatisticsCollector.java:124) ~[spark-1.10.129-forge.jar!/:?]
+	at TRANSFORMER/spark@1.10.129/me.lucko.spark.common.sampler.async.AsyncSampler.rotateProfilerJob(AsyncSampler.java:141) ~[spark-1.10.129-forge.jar!/:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358) ~[?:?]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+[15Jul2025 04:04:21.626] [Server Watchdog/ERROR] [net.minecraft.server.dedicated.ServerWatchdog/FATAL]: A single server tick took 60.00 seconds (should be max 0.05)
+[15Jul2025 04:04:21.626] [Server Watchdog/ERROR] [net.minecraft.server.dedicated.ServerWatchdog/FATAL]: Considering it to be crashed, server will forcibly shutdown.
+[15Jul2025 04:04:21.855] [Server Watchdog/FATAL] [net.minecraftforge.common.ForgeMod/]: Preparing crash report with UUID d9b3d759-bf20-4f2d-972e-143c194d7fbf
+[15Jul2025 04:04:21.859] [Server Watchdog/FATAL] [net.minecraftforge.common.ForgeMod/]: Preparing crash report with UUID b8ee920e-5016-4b75-aacf-0bc09c96a5e7
+[15Jul2025 04:04:21.859] [Server Watchdog/ERROR] [net.minecraft.server.dedicated.ServerWatchdog/]: This crash report has been saved to: /workspaces/wewekito/servidor_minecraft/crash-reports/crash-2025-07-15_04.04.21-server.txt
