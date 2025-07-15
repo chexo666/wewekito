@@ -168,3 +168,7 @@
 [15Jul2025 02:45:34.124] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: ShallanDav4r lost connection: Disconnected
 [15Jul2025 02:45:34.125] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ShallanDav4r left the game
 [15Jul2025 02:48:56.777] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <nazcke> boy a cagar
+[15Jul2025 03:00:13.826] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: ShallanDav4r[/100.120.23.82:49756] logged in with entity id 17237 at (4872.190926958519, 98.0, 2211.586290546228)
+[15Jul2025 03:00:13.832] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ShallanDav4r joined the game
+[15Jul2025 03:00:14.105] [Server thread/INFO] [ping-wheel/]: Channel update: ShallanDav4r -> default
+[15Jul2025 03:07:38.530] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] [Server] algo racista
