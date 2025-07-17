@@ -148,3 +148,18 @@
 [17Jul2025 06:21:25.443] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [ShallanDav4r: Killed ShallanDav4r]
 [17Jul2025 06:21:25.448] [Server thread/INFO] [tombstone/]: tombstone.message.recovery.save_player.success
 [17Jul2025 06:21:48.035] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [ShallanDav4r: Gamerule keepInventory is now set to: false]
+[17Jul2025 06:31:32.023] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: ShallanDav4r lost connection: Disconnected
+[17Jul2025 06:31:32.023] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ShallanDav4r left the game
+[17Jul2025 06:32:32.019] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Server empty for 60 seconds, pausing
+[17Jul2025 06:34:48.269] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping the server
+[17Jul2025 06:34:48.320] [Server thread/INFO] [atomicstryker.multimine.common.MultiMine/]: MultiMine ServerStoppingEvent
+[17Jul2025 06:34:48.324] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[17Jul2025 06:34:48.325] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[17Jul2025 06:34:48.325] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[17Jul2025 06:34:48.336] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[17Jul2025 06:34:48.348] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[17Jul2025 06:34:48.352] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[17Jul2025 06:34:48.410] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[17Jul2025 06:34:48.410] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[17Jul2025 06:34:48.410] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[17Jul2025 06:34:48.411] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
